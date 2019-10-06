@@ -5,7 +5,7 @@
 # Assignment: Compiling C code Makefile
 
 # This Makefile is for compiling C code.
-# TEST 2
+# TEST 3
 
 Count3s:
 	gcc CountThreesC/countThrees.c CountThreesC/readInt32BitLE.c -o Count3s
