@@ -8,6 +8,6 @@
 # TEST 4
 
 Count3s:
-	gcc CountThreesC/countThrees.c CountThreesC/readInt32BitLE.c -o Count3s
+	gcc countThrees.c readInt32BitLE.c -o Count3s
 runCount3s:
 	./Count3s threesData.bin
