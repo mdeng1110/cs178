@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Name: May Deng
+     Course: CS 178 Build Automation for DevOps and QA
+     CRN: 76718
+     Date: 9/5/19
+     Assignment: build.xml to compile Java Code
+-->
+
+<project>
+    <description>This is an Ant build.xml file that builds and runs the Java code. 
+        </description>      
+    <target name="Count3s" description="builds the Count3s class from source">
+        <mkdir dir="build/classes"/>
+        <mkdir dir="build/jar"/>
+        <javac srcdir="CountThreesJava" destdir="build/classes"/>
+        <jar basedir="build/classes" destfile="build/jar/CountThrees.java">
+            <manifest>
+                <attribute name="Main-Class" value="CountThrees"/>
+            </manifest>
+        </jar>        
+    </target>
+    <target name="runCount3s" description="runs the Count3s">
+        <java jar="build/jar/CountThrees.java" fork="true"/>
+    </target>
+</project>
+
+
